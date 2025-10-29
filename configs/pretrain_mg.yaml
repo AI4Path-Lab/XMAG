@@ -1,0 +1,70 @@
+# Copyright (c) 2025 Ziyu Su
+# Licensed under the PolyForm Noncommercial License 1.0.0
+# See the LICENSE file or https://polyformproject.org/licenses/noncommercial/1.0.0/ for details.
+
+project:
+  name: "pathology_distillation"
+  seed: 42
+  precision: 16  # Use mixed precision training
+
+data:
+  batch_size: 48  # Per-GPU batch size
+  num_workers: 8  # Per-GPU workers
+  pin_memory: True
+  train_path: "/fs/scratch/PAS2942"
+  val_path: "./sampled_images"
+  data_tag: "TCGA_DS_"
+  magnification_high: 20  # 20x magnification
+  magnification_low: 5    # 5x magnification
+  patch_size_teacher: 896  # 896x896 patches for teacher (20x)
+  patch_size_student: 224  # 224x224 patches for student (5x)
+  
+model:
+  teacher:
+    name: "UNIv2"
+    checkpoint_path: "../assets/ckpts/uni2-h/pytorch_model.bin"
+    freeze: True
+    global_head: 'identity'
+    local_head: 'identity'
+  student:
+    name: "dinov2_vitb14"
+    embed_dim: 768
+    hidden_dim: 1536
+    out_dim: 1536
+    pretrained: True
+    depth: 12
+    num_heads: 12
+    global_head: 'linear2'
+    local_head: 'linear2'
+    
+distillation:
+  ema_decay: 0.999  # For sparse EMA student
+  global_loss_weight: 1.0
+  local_loss_weight: 0.5
+  temperature_teacher: 0.07
+  temperature_student: 0.1
+  local_token_mapping: "average_4x4"  # How to map 4x4 teacher tokens to student
+  global_loss:
+    name: "negcosinesim"
+    eps: 0.00000001
+  local_loss:
+    name: "negcosinesim"
+    eps: 0.00000001
+
+optimizer:
+  name: "adamw"
+  lr: 0.0005  # Keep same LR, PyTorch Lightning handles scaling
+  weight_decay: 0.05
+  
+scheduler:
+  name: "cosine"
+  warmup_epochs: 10
+  max_epochs: 10
+  
+trainer:
+  # These will be overridden by SLURM detection in utils/slurm.py
+  accelerator: "ddp"
+  gradient_clip_val: 1.0
+  log_every_n_steps: 50
+  val_check_interval: 0.5
+  sync_batchnorm: True  # Important for multi-GPU batch norm sync
