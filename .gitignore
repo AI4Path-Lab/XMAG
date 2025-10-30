@@ -25,12 +25,10 @@ images/
 *.xlsx
 *.jpeg
 *.jpg
-*.png
 *.gif
 # =====================
 # Model Weights & Checkpoints
 # =====================
-assets/
 checkpoints/
 ckpts/
 weights/
@@ -54,6 +52,7 @@ inference_results/
 samples/
 *.log
 *.txt
+file.md
 
 # =====================
 # Compressed & Archive Files
