@@ -8,7 +8,7 @@ from torchvision import transforms
 import timm
 from huggingface_hub import login, hf_hub_download
 
-login("***REMOVED***")  # login with your User Access Token, found at https://huggingface.co/settings/tokens
+login("huggingfacexxx")
 
 local_dir = "../assets/ckpts/uni2-h/"
 os.makedirs(local_dir, exist_ok=True)  # create directory if it does not exist

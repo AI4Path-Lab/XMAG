@@ -14,8 +14,6 @@ import timm
 from huggingface_hub import login, hf_hub_download
 
 
-# login("***REMOVED***")  # login with your User Access Token, found at https://huggingface.co/settings/tokens
-
 
 class TeacherWrapper(nn.Module):
     """Wrapper for the UNI teacher model."""
