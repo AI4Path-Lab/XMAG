@@ -1,4 +1,4 @@
-# 🧬 XMAG: Cross-Magnification Distillation for Efficient Pathology Foundation Model
+# XMAG: Cross-Magnification Distillation for Efficient Pathology Foundation Model
 
 <p align="center">
   <img src="./assets/gfigure1.png" width="100%"/>
@@ -24,12 +24,12 @@ Pretrained model weights can be downloaded here:
 
 ## Usage
 
-#### Install dependencies
+Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-#### To generate image embeddings, navigate to the `encoding` directory and run:
+To generate image embeddings, navigate to the `encoding` directory and run:
 
 ```bash
 python encode.py
@@ -41,8 +41,9 @@ If you use XMAG in your research, please cite:
 @article{su2025xmag,
   title={XMAG: Cross-Magnification Distillation for Efficient Pathology Foundation Model},
   author={Su, Ziyu and et al.},
-  journal={TBD},
-  year={2025}
+  journal={arXiv preprint arXiv:2509.23097},
+  year={2025},
+  url={https://arxiv.org/abs/2509.23097}
 }
 ```
 
