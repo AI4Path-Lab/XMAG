@@ -1,0 +1,95 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# =====================
+# Datasets & Training Data
+# =====================
+dataset/
+sampled_images/
+images/
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.jpeg
+*.jpg
+*.png
+*.gif
+# =====================
+# Model Weights & Checkpoints
+# =====================
+assets/
+checkpoints/
+ckpts/
+weights/
+uni2-h/
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.onnx
+*.bin
+
+# =====================
+# Outputs & Logs
+# =====================
+outputs/
+logs/
+log/
+wandb/
+runs/
+inference_results/
+samples/
+*.log
+*.txt
+
+# =====================
+# Compressed & Archive Files
+# =====================
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+
+# =====================
+# System Files
+# =====================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# =====================
+# ckpits
+# =====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =====================
+# Temporary Files
+# =====================
+*.tmp
+*.bak
+*.swp
+*.pid
+
+# =====================
+# Git LFS (Optional)
+# =====================
+# If you use git-lfs, ignore pointer files in specific cases
+# *.gitattributes

@@ -1,6 +1,14 @@
 ## Streamline pathology foundation model by cross-magnification distillation
 
-Our model checkpoints will be released by the end of October 2025.
+This is the official implementation of XMAG, our new pathology foundation model working under 5x.
+
+Model checkpoints can be downloaded at [here](https://drive.google.com/file/d/1RiXa-ZvJ_VorvwgnEffJDIWYTGt_1YBF/view?usp=sharing)
+
+Usage: go to `encoding`
+
+```bash
+python encode.py
+```
 
 
 ## License
