@@ -61,7 +61,7 @@ def main(args):
     LearningRateMonitor(logging_interval='step')]
 
     # Setup logger
-    wandb.login(key="cb54a27273add0758e043cde2cfc8a0e73447bfa")
+    wandb.login(key="xxxxx")
     
     run_name = args.run_name if args.run_name else f"{config['project']['name']}_{config['project']['seed']}"
     tags = args.tags.split(',') if args.tags else None
