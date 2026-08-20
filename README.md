@@ -1,5 +1,7 @@
 # XMAG: Cross-Magnification Distillation for Efficient Pathology Foundation Model
 
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-AI4PATH%2FXMAG-yellow)](https://huggingface.co/AI4PATH/XMAG)
+
 <p align="center">
   <img src="./assets/gfigure1.png" width="100%"/>
 </p>
@@ -18,7 +20,14 @@ Despite operating at lower resolution, XMAG achieves performance comparable to s
 ## Model Checkpoints
 
 Pretrained model weights can be downloaded here:  
+👉 [XMAG on Hugging Face](https://huggingface.co/AI4PATH/XMAG)  
 👉 [XMAG-5× Checkpoint (Google Drive)](https://drive.google.com/file/d/1RiXa-ZvJ_VorvwgnEffJDIWYTGt_1YBF/view?usp=sharing)
+
+---
+
+## Updates
+
+- 2026-08-20: XMAG is now available on Hugging Face: [AI4PATH/XMAG](https://huggingface.co/AI4PATH/XMAG).
 
 ---
 
