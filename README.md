@@ -47,13 +47,16 @@ python encode.py
 ## Citation
 If you use XMAG in your research, please cite:
 ```
-@article{su2025xmag,
-  title={XMAG: Cross-Magnification Distillation for Efficient Pathology Foundation Model},
-  author={Su, Ziyu and et al.},
-  journal={arXiv preprint arXiv:2509.23097},
-  year={2025},
-  url={https://arxiv.org/abs/2509.23097}
-}
+@article{SU2027104352,
+title = {Streamline pathology foundation model by cross-magnification distillation},
+journal = {Medical Image Analysis},
+volume = {115},
+pages = {104352},
+year = {2027},
+issn = {1361-8415},
+doi = {https://doi.org/10.1016/j.media.2026.104352},
+url = {https://www.sciencedirect.com/science/article/pii/S1361841526004214},
+author = {Ziyu Su and Abdul Rehman Akbar and Usama Sajjad and Anil V. Parwani and Muhammad Khalid Khan Niazi},
 ```
 
 
