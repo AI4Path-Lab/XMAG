@@ -56,7 +56,7 @@ year = {2027},
 issn = {1361-8415},
 doi = {https://doi.org/10.1016/j.media.2026.104352},
 url = {https://www.sciencedirect.com/science/article/pii/S1361841526004214},
-author = {Ziyu Su and Abdul Rehman Akbar and Usama Sajjad and Anil V. Parwani and Muhammad Khalid Khan Niazi},
+author = {Ziyu Su and Abdul Rehman Akbar and Usama Sajjad and Anil V. Parwani and Muhammad Khalid Khan Niazi}}
 ```
 
 
